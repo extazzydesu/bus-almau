@@ -1,0 +1,43 @@
+<html>
+    <link href="./login.css" rel="stylesheet">
+<body>
+    <main>
+        <div class="box1">
+            <div class="contact">
+                <p class="contact">+7 (707) 431 00 13</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="logo">
+                <img src="./logo_new.jpeg" class="almau_logo" />
+            </div>
+            <div class="login_window">
+                <form name="test" method="post" >
+                    <p><b>Username:</b><br>
+                     <input type="text" class="login" required>
+                    </p>
+                    <p><b>Password:</b><br>
+                        <input type="password" class="login" required  id="myPassword">
+                    </p>
+                    <div class="ShowPassword">
+                        <input type="checkbox" onclick="myFunction()" >
+                        Show Password
+                    </div>
+                    <script>
+                        function myFunction() {
+                            var x = document.getElementById("myPassword");
+                            if (x.type === "password") {
+                            x.type = "text";
+                            } else {
+                            x.type = "password";
+                            }
+                        }
+                    </script>
+                    
+                </form> 
+                <button type="submit">Log In </button>
+            </div>
+        </div>
+    </main>
+</body>   
+</html>

@@ -1,0 +1,21 @@
+body, html{
+    margin: 0;
+    font-family: sans-serif;
+    justify-content: center;
+}
+
+.box1{
+    height: 100px;
+    width: 100%;
+    background-color: #173f7d;
+    color: white;
+    align-items: center;
+    margin: 0;
+}
+
+.box2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
