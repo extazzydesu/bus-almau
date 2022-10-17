@@ -9,19 +9,21 @@
                 <form name="order" method="post" >
                     <p><b>Select route:</b>
                         <select name="route" id="route-select">
-                            <option value="route-1">Route 1</option>
+                            <option value="route-1" alt="yes">Route 1</option>
                             <option value="route-2">Route 2</option>
                         </select>
-                    </p><b>Select suitable time:</b>
+                    </p>
+                    <p><b>Select suitable time:</b>
                         <input type="radio" id="time-1" name="route-time"  onclick="deselect()">
                         <label for="time-1">18:00</label>
                         <input type="radio" id="time-2" name="route-time">
                         <label for="time-2">21:30</label>
+                    </p>    
                     <p><b>Your stop:</b>
-                        <input type="text" value="" id="address">
+                        <input type="text" value="" id="address" required>
                     </p>
-                    <button value="Confirmation">
-                        <a href="./personal-profile.html">Confirm</a>
+                    <button value="Confirmation" class="confirmation-readdress" type="submit" autocomplete="off">
+                        <a>Confirm</a>
                     </button>
                     <!-- <script>
                         document.getElementById("time-1").checked = false
