@@ -52,14 +52,6 @@ form{
     align-items: center;
     justify-content: center;
 }
-button{
-    border: none;
-    background-color: navy;
-    color: white;
-    border-radius: 4px;
-    height: 30px;
-    width: 90px;
-}
 
 input[type=text], input[type=password]{
     background-color: white;
@@ -81,7 +73,16 @@ input[type=checkbox]{
     padding: 5px;
 }
 
+.login-btn{
+    border: none;
+    background-color: navy;
+    color: white;
+    border-radius: 4px;
+    height: 30px;
+    width: 90px;
+}
 
-.button[type=submit]:hover{
-    background-color: darkblue;
+.login-btn:hover{
+    background-color: blue;
+    cursor: pointer;
 }
