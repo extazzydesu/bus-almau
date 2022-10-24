@@ -12,32 +12,62 @@
                 <img src="./logo_new.jpeg" class="almau_logo" />
             </div>
             <div class="login_window">
-                <form name="test" method="post" >
+                <form name="test" id="loginFormId" action="">
                     <p><b>Username:</b><br>
-                     <input type="text" class="login" required>
+                     <input type="text" class="login" required id="loginId">
                     </p>
                     <p><b>Password:</b><br>
-                        <input type="password" class="login" required  id="myPassword" autocomplete="off">
+                        <input type="password" class="login" required  id="passwordId" autocomplete="off">
                     </p>
                     <div class="ShowPassword">
                         <input type="checkbox" onclick="myFunction()" >
                         Show Password
                     </div>
-                    <script>
-                        function myFunction() {
-                            var x = document.getElementById("myPassword");
-                            if (x.type === "password") {
-                            x.type = "text";
-                            } else {
-                            x.type = "password";
-                            }
-                        }
-                    </script>
-                    <button class="login-btn" type="submit" value="Login">Login</button>
+                    <div class="login-register">
+                        <button class="login-btn" type="submit" value="Login">Login</button>
+                        <button class="pop-upReg" onclick="openRegForm()">Register</button>
+                    </div>
                 </form> 
                 
+                    <div class="regForm" id="regForm-popup">
+                            <form class="form-container" id="regForm" action="">
+                                <h1>Create your account</h1>
+                            
+                                <label for="loginReg"><b>Email</b></label>
+                                <input type="text" placeholder="Enter Login" name="loginReg" required id="loginRegid">
+                            
+                                <label for="logpsw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="logpsw" required id="logpswId">
+                            
+                                <div class="sign-closeLine">
+                                    <button type="submit" class="pop-upRegBtn">Sign Up</button>
+                                    <button type="button" class="pop-upRegCnclBtn" onclick="closeRegForm()">Close</button>
+                                </div>
+                            </form>
+                            <script>
+                                function openRegForm() {
+                                document.getElementById("regForm-popup").style.display = "block";
+                                }
+                                
+                                function closeRegForm() {
+                                document.getElementById("regForm-popup").style.display = "none";
+                                }
+                            </script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+                            <script src="./login-details.js"></script>
+                </div>
             </div>
         </div>
     </main>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myPassword");
+            if (x.type === "password") {
+            x.type = "text";
+            } else {
+            x.type = "password";
+            }
+        }
+    </script>
 </body>   
 </html>
