@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     font-family: sans-serif;
     justify-content: center;
+    position: relative;
 }
 .box1 {
     height: 100px;
@@ -75,7 +76,7 @@ input[type=checkbox]{
 
 .login-btn{
     border: none;
-    background-color: navy;
+    background-color: #173f7d;
     color: white;
     border-radius: 4px;
     height: 30px;
@@ -83,6 +84,47 @@ input[type=checkbox]{
 }
 
 .login-btn:hover{
-    background-color: blue;
+    background-color: navy;
     cursor: pointer;
+}
+
+.regForm{
+    display: none;
+    flex-direction: column;
+    bottom: 100px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    background-color: #173f7d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pop-upReg{
+    border: none;
+    background-color: white;
+    size: 90px;
+    height: 20px;
+
+}
+.pop-upReg:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.regForm button[type=submit], button[type=button]{
+    margin: 5px;
+    border:none;
+    border-radius: 4px;
+    background-color: white;
+    text-decoration: none;
+    color:#173f7d;
+}
+
+.regForm button[type=submit]:hover, button[type=button]:hover{
+    cursor: pointer;
+    background-color: ivory;
 }
