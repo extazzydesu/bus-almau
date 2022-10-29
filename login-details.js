@@ -59,3 +59,13 @@ async function submitLog(event2) {
 
     console.log(login, password);
 }
+
+
+function myFunction() {
+    var x = document.getElementById("passwordId");
+    if (x.type === "password") {
+    x.type = "text";
+    } else {
+    x.type = "password";
+    }
+}

@@ -6,7 +6,7 @@
         <div class="box1"></div>
         <div class="box2">
             <div class="order-window" alt="Let's make an order">
-                <form name="order" method="post" >
+                <form name="order" method="post" id="orderWindowId">
                     <p><b>Select route:</b>
                         <select name="route" id="route-select">
                             <option value="route-1" alt="yes">Route 1</option>
@@ -14,9 +14,9 @@
                         </select>
                     </p>
                     <p><b>Select suitable time:</b>
-                        <input type="radio" id="time-1" name="route-time"  onclick="deselect()">
+                        <input type="radio" id="time-1" name="route-time" value="18:00" required>
                         <label for="time-1">18:00</label>
-                        <input type="radio" id="time-2" name="route-time">
+                        <input type="radio" id="time-2" name="route-time" value="21:30">
                         <label for="time-2">21:30</label>
                     </p>    
                     <p><b>Your stop:</b>
@@ -25,9 +25,8 @@
                     <button value="Confirmation" class="confirmation-readdress" type="submit">
                         <a>Confirm</a>
                     </button>
-                    <!-- <script>
-                        document.getElementById("time-1").checked = false
-                    </script> -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+                    <script src="./order.js"></script>
                 </form>
             </div>
         </div>
